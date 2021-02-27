@@ -90,3 +90,29 @@ function divisibleByTen(array)
 
 console.log(divisibleByTen(array));
 console.log("----------------------------------");
+
+//Given an array of integers, return an array of numbers where odd numbers are incremented by 1 and even are decremented by 1
+
+function game(array)
+{
+  return array.map((num)=>num%2?num+1:num-1);
+}
+
+console.log(game(array));
+console.log("----------------------------------");
+
+//Given an array of integers, return an object with sum of all odd numbers and even numbers separately
+
+function game2(array){
+  const oddSum = array.reduce((accumulator, currentValue)=> currentValue%2?accumulator+currentValue:accumulator
+,0);
+
+  const evenSum = array.reduce((accumulator, currentValue)=> !(currentValue%2)?accumulator+currentValue:accumulator
+,0);
+
+  return {oddSum, evenSum};
+}
+
+
+console.log(game2(array));
+console.log("----------------------------------");
