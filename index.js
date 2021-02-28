@@ -50,17 +50,11 @@ console.log("----------------------------------");
 //Given an array of integers, find the sum of all numbers at odd index
 
 function sumOfOddIndexes(array) {
-  let sum=0;
-  for (const index in array) {
-    if(index%2)
-    {
-      sum+=array[index];
-    }
-  }
-  return sum;
+  return array.filter((item, index)=>index%2?item:null).reduce((a, c)=>a+c)
+
 }
 
-console.log(sumOfOddIndexes(array));
+console.log(sumOfOddIndexes(array), "sum of odd indices");
 console.log("----------------------------------");
 
 //Given an array of integers, find the biggest number in array
@@ -176,6 +170,7 @@ function numberOfCharacters(stringArray){
 console.log(numberOfCharacters(stringArray));
 console.log("----------------------------------");
 
+//
 
 
 
