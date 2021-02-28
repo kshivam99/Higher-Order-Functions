@@ -116,3 +116,83 @@ function game2(array){
 
 console.log(game2(array));
 console.log("----------------------------------");
+
+const stringArray=["dry", "banana", "apple", "orange", "cat", "dog"];
+
+//Given an array of strings find the number of strings with similar number of characters.
+
+function similarNumberOfCharacters(stringArray){
+
+  let newObj={};
+  stringArray.forEach((item)=>{
+    if(newObj[item.length]!==1)
+        newObj[item.length]=1;
+    else
+        newObj[item.length]+=1;
+  })
+  return newObj;
+}
+
+
+console.log(similarNumberOfCharacters(stringArray));
+console.log("----------------------------------");
+
+//return an array with strings which have vowels
+
+function checkVowels(word)
+{
+  let ret=false;
+  for(l of word)
+  {
+  if(l==='a'|| l==='e' || l==='i' || l==='o' || l==='u')
+      ret=true;
+  }
+  return ret;
+}
+
+
+function stringWithVowels(stringArray){
+
+  return stringArray.filter((word)=>checkVowels(word))
+}
+
+
+console.log(stringWithVowels(stringArray));
+console.log("----------------------------------");
+
+//Return an array of objects with key as item and value as number of characters in the string
+
+function numberOfCharacters(stringArray){
+
+  let newObj={};
+  stringArray.forEach((item)=>{
+    
+        newObj[item]=item.length;
+    
+  })
+  return newObj;
+}
+
+console.log(numberOfCharacters(stringArray));
+console.log("----------------------------------");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
